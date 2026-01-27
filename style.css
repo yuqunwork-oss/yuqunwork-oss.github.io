@@ -40,3 +40,12 @@ nav a {
 nav a:hover {
   color: white;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 120px 20px;
+}
+
