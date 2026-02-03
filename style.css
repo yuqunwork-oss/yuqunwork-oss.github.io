@@ -49,3 +49,13 @@ section {
   padding: 120px 20px;
 }
 
+/*證照*/
+.award-photo {
+  max-width: 480px;   /* ← 控制最大寬度，建議 400~600 */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
