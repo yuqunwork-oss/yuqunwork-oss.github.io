@@ -48,6 +48,12 @@ html {
 section {
   padding: 120px 20px;
 }
+ul {
+  list-style: none;   /* 移除白點 */
+  padding-left: 0;    /* 移除左邊空白 */
+  margin: 0;
+}
+
 
 /*證照*/
 .award-photo {
