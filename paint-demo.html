@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>育群版小畫家</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="panel" id="size-panel">
+      <button id="saveBtn">存檔</button>
+      <button id="rdBtn">讀檔</button>
+
+      <h4></h4>
+      <div class="toolbar">
+        <label>
+          圖形種類：
+          <select id="shapeSelect">
+            <option value="">請選擇</option>
+            <option value="circle">⏺︎</option>
+            <option value="square">⏹︎</option>
+            <option value="rect">▏</option>
+          </select>
+        </label>
+        <label>
+          ◮：
+          <select id="flipCanvas">
+            <option value="">請選擇</option>
+            <option value="horizontalFlip">水平翻轉</option>
+            <option value="verticalFlip">垂直翻轉</option>
+          </select>
+        </label>
+        <button id="btn-drawPen" type="button">🖌️</button>
+        <label
+          >繪筆大小：
+          <input
+            type="number"
+            id="drawPenSizeInput"
+            value="20"
+            min="5"
+            max="200"
+          />
+        </label>
+      </div>
+      <form id="settingForm">
+        <label
+          >color:
+          <input type="Color" id="colorInput" value="#000000" />
+        </label>
+        <label
+          >圓/方大小：
+          <input type="number" id="sizeInput" value="66" min="5" max="200" />
+        </label>
+        <label
+          >線寬：
+          <input type="number" id="widthInput" value="3" min="1" max="100" />
+        </label>
+      </form>
+      <button id="onDo">↶</button>
+      <button id="reDo">↷</button>
+      <button id="btn-del">🗑</button>
+      <button id="btn-cleardata">⛝</button
+      ><button id="btn-repaint">Repaint</button>
+      <canvas
+        id="canvas"
+        width="900"
+        height="500"
+        style="background-color: #fff"
+      ></canvas>
+      <p id="coord">座標：(x, y)</p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
