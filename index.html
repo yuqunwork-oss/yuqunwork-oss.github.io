@@ -1,39 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <title>我的第一個網站</title>
+  <meta charset="UTF-8">
+  <title>吳育群｜工程師作品集</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- 導覽列 -->
   <nav>
     <ul>
-     <li><a href="#home">首頁</a></li>
-     <a href="projects.html">作品</a>
-     <li><a href="#about">關於我</a></li>
-     <li><a href="#contact">聯絡</a></li>
+      <li><a href="index.html">主頁</a></li>
+      <li><a href="projects.html">作品集</a></li>
+      <li><a href="certificates.html">證照與比賽</a></li>
+      <li><a href="contact.html">聯絡我</a></li>
     </ul>
   </nav>
-  <section id="home">
-  <h1>成功啦！！！</h1>
-  <p>這是育群的網站 😎</p>
-</section>
 
-<section id="projects">
-  <h2>我的作品</h2>
-  <p>這裡未來會放我的專案</p>
-</section>
+  <!-- 主視覺 / Hero -->
+  <section class="hero">
+    <h1>吳育群 Yu-Qun Wu</h1>
+    <h2>AI 應用 / 軟體工程師</h2>
+    <p>
+      專注於 AI 應用整合、影像處理與系統開發，  
+      能將模型實際落地為可操作、可展示的應用系統。
+    </p>
+  </section>
 
-<section id="about">
-  <h2>關於我</h2>
-  <p>我是資管系學生，專注於 AI 與 Web 開發。</p>
-</section>
+  <!-- 技能摘要 -->
+  <section class="skills">
+    <h3>核心技能</h3>
+    <ul>
+      <li>Python / JavaScript</li>
+      <li>Computer Vision（OpenCV、YOLO）</li>
+      <li>AI 模型整合與推論流程</li>
+      <li>Web 系統整合（REST API）</li>
+      <li>Git / GitHub Pages</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>聯絡方式</h2>
-  <p>Email: yuqun.work@gmail.com</p>
-</section>
+  <!-- 精選專案 -->
+  <section class="featured-projects">
+    <h3>精選專案</h3>
 
+    <div class="project-item">
+      <h4>AI 影像辨識應用</h4>
+      <p>以影像處理與深度學習模型實作實務導向的辨識系統。</p>
+      <a href="projects.html">查看專案 →</a>
+    </div>
+
+    <div class="project-item">
+      <h4>Web 系統整合專案</h4>
+      <p>整合前端、後端與資料處理流程，完成可實際使用的網站。</p>
+      <a href="projects.html">查看專案 →</a>
+    </div>
+  </section>
+
+  <!-- 行動引導 -->
+  <section class="cta">
+    <p>想了解更多我的實作經驗與專案內容？</p>
+    <a class="cta-button" href="projects.html">前往作品集</a>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>© 2026 吳育群 Yu-Qun Wu</p>
+  </footer>
 
 </body>
 </html>
