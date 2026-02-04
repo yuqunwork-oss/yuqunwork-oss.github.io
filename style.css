@@ -1,24 +1,43 @@
+/* =========================
+   全站色彩變數（統一管理）
+========================= */
+:root {
+  --bg-main: #0f172a;       /* 主背景 */
+  --bg-nav: #1e293b;        /* 導覽列背景 */
+  --bg-card: #111827;       /* 卡片背景 */
+  --primary: #38bdf8;       /* 主色（科技藍） */
+
+  --text-main: #f8fafc;     /* 主要文字 */
+  --text-sub: #cbd5e1;      /* 次要文字 */
+  --border-light: #334155;  /* 淡邊框 */
+}
+
+/* =========================
+   基本設定
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #0f172a;
-  color: white;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  margin-top: 100px;
 }
 
-h1 {
-  font-size: 48px;
-  color: #38bdf8;
-}
-
-p {
-  font-size: 20px;
-  color: #cbd5e1;
-}
-
+/* =========================
+   導覽列
+========================= */
 nav {
-  background-color: #1e293b;
-  padding: 15px 0;
+  background-color: var(--bg-nav);
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 nav ul {
@@ -32,38 +51,92 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #38bdf8;
+  color: var(--primary);
   font-size: 18px;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: white;
+  color: var(--text-main);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* =========================
+   內容區塊
+========================= */
 section {
-  padding: 120px 20px;
+  padding: 120px 20px 80px;
 }
+
+/* =========================
+   標題與文字
+========================= */
+h1 {
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+  display: inline-block;
+}
+
+p {
+  font-size: 20px;
+  color: var(--text-sub);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* =========================
+   清除清單白點（全站）
+========================= */
 ul {
-  list-style: none;   /* 移除白點 */
-  padding-left: 0;    /* 移除左邊空白 */
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
+/* =========================
+   卡片樣式（作品 / 證照）
+========================= */
+.card,
+.cert-section {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 32px 24px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
 
-/*證照*/
+/* =========================
+   證照圖片
+========================= */
 .award-photo {
   max-width: 480px;
   width: 100%;
   height: auto;
 
-  display: block;        /* 關鍵 */
-  margin: 20px auto;     /* 左右 auto = 置中 */
+  display: block;
+  margin: 24px auto;
 
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   連結統一風格
+========================= */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: underline;
 }
