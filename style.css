@@ -172,14 +172,18 @@ a:hover {
 }
 
 .project-media {
-  margin: 20px 0;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
 }
 
 .demo-video {
   width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  margin-top: 10px;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
 }
 
 .media-note {
