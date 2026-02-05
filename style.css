@@ -140,5 +140,64 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* =========================
+   專案內容
+========================= */
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.project-desc {
+  color: #555;
+  line-height: 1.7;
+}
+
+.project-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
+.project-media {
+  margin: 20px 0;
+}
+
+.demo-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.media-note {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-list li {
+  background: #f1f5f9;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
 
 
