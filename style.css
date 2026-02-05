@@ -140,3 +140,17 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* =========================
+   小畫家標題
+========================= */
+.project-title {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.project-subtitle {
+  color: #9fb7ff;
+  margin-bottom: 24px;
+}
+
+
