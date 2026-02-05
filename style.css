@@ -196,12 +196,17 @@ a:hover {
 .tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  justify-content: center;   /*  關鍵 */
+  max-width: 800px;          /*  跟文字同寬 */
+  margin: 24px auto 0;       /*  置中 */
 }
 
 .tech-list li {
-  background: #f1f5f9;
-  padding: 6px 12px;
+  background: #1e293b;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
   border-radius: 999px;
   font-size: 0.9rem;
 }
