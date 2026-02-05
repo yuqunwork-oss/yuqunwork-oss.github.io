@@ -24,7 +24,7 @@ body {
   color: var(--text-main);
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: 72px;   /*  導覽列高度 */
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ nav a:hover {
    內容區塊
 ========================= */
 section {
-  padding: 120px 20px 80px;
+  padding: 60px 20px 80px;
 }
 
 /* =========================
