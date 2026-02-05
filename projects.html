@@ -24,128 +24,136 @@
     <p>以下為我實作過的部分專案，涵蓋 AI 應用、影像處理與系統整合。</p>
   </header>
 
-  <!-- 專案一 -------------------------------------------------------------------------------------->
+  <!-- 專案一 -->
+  <section class="project-card">
+    <h2>小畫家（Canvas 繪圖應用）</h2>
 
+    <ul>
+      <li><strong>問題：</strong>在瀏覽器中實作即時、直覺的繪圖互動體驗。</li>
+      <li><strong>做法：</strong>使用 HTML5 Canvas 搭配 JavaScript，處理滑鼠事件、物件狀態與繪圖流程。</li>
+      <li><strong>我的角色：</strong>前端互動設計、Canvas 繪圖邏輯、UI 樣式與功能整合。</li>
 
-<section class="project-card">
-  <h2>小畫家（Canvas 繪圖應用）</h2>
-  <ul>
-    <li><strong>問題：</strong>在瀏覽器中實作即時、直覺的繪圖互動體驗。</li>
-    <li><strong>做法：</strong>使用 HTML5 Canvas 搭配 JavaScript，處理滑鼠事件、物件狀態與繪圖流程。</li>
-    <li><strong>我的角色：</strong>前端互動設計、Canvas 繪圖邏輯、UI 樣式與功能整合。</li>
+      <li>
+        <strong>核心功能：</strong>
+        <ul class="feature-list">
+          <li><strong>繪圖：</strong>線條、矩形、圓形、自由繪筆</li>
+          <li><strong>編輯：</strong>Undo / Redo、清空畫布、取消選取、水平 / 垂直翻轉</li>
+          <li><strong>輔助：</strong>顏色與筆刷大小調整、座標顯示、滑鼠游標變化</li>
+          <li><strong>進階：</strong>存檔 / 讀檔、物件拖拉、尺寸調整</li>
+        </ul>
+      </li>
 
-    <li><strong>核心功能：</strong>
-      <ul class="feature-list">
-        <li><strong>繪圖：</strong>線條、矩形、圓形、自由繪筆</li>
-        <li><strong>編輯：</strong>Undo / Redo、清空畫布、取消選取、水平 / 垂直翻轉</li>
-        <li><strong>輔助：</strong>顏色與筆刷大小調整、座標顯示、滑鼠游標變化</li>
-        <li><strong>進階：</strong>存檔 / 讀檔、物件拖拉、尺寸調整</li>
-      </ul>
-    </li>
+      <li>
+        <strong>成果：</strong>
+        <a href="paint-demo.html" target="_blank">▶ 線上 DEMO（可直接操作）</a>
+      </li>
+    </ul>
 
-    <li><strong>成果：</strong>
-      <a href="paint-demo.html" target="_blank">▶ 線上 DEMO（可直接操作）</a>
-    </li>
-    <li><strong>技術：</strong>HTML5 Canvas、JavaScript、CSS</li>
-  </ul>
-</section>
+    <h3>使用技術</h3>
+    <ul class="tech-list">
+      <li>HTML / CSS / JavaScript</li>
+    </ul>
+  </section>
 
+  <!-- 專案二 -->
+  <section class="project-card">
+    <h2>補習班招生網站暨線上報名系統</h2>
 
-  
-
-
-  <!-- 專案二 --------------------------------------------------------------------------->
-<section class="project-card">
-  <h2>補習班招生網站暨線上報名系統</h2>
-
-  <p class="project-desc">
-    此專案為實際營運中的補習班官方招生網站，提供課程介紹、線上報名與資料自動彙整功能，
-    協助補習班有效降低人工行政流程並提升招生效率。
-  </p>
-  <!-- 專案連結 -->
-  <p class="project-link">
-    🔗 專案展示網址：
-    <a href="https://yuqunwork-oss.github.io/ntpc-skill-assoc/index.html" 
-       target="_blank" rel="noopener">
-       https://yuqunwork-oss.github.io/ntpc-skill-assoc/
-    </a>
-  </p>
-
-  <!-- 操作影片 -->
-  <div class="project-media">
-    <h3>🎥 實際操作展示</h3>
-    <video controls muted preload="metadata" class="demo-video">
-      <source src="videos/ntpc_demo09.mp4" type="video/mp4">
-      您的瀏覽器不支援影片播放。
-    </video>
-    <p class="media-note">
-      展示內容包含課程瀏覽、線上報名流程，以及後台資料即時彙整示意。
+    <p class="project-desc">
+      此專案為實際營運中的補習班官方招生網站，提供課程介紹、線上報名與資料自動彙整功能，
+      協助補習班有效降低人工行政流程並提升招生效率。
     </p>
-  </div>
 
-  <!-- 我的角色 -->
-  <h3>我的角色</h3>
-  <ul>
-    <li>需求訪談與系統規劃</li>
-    <li>前端網站設計與製作（HTML / CSS / JavaScript）</li>
-    <li>線上報名表單設計與驗證</li>
-    <li>Google API 串接與資料自動化</li>
-    <li>系統維護與後續功能調整</li>
-  </ul>
+    <p class="project-link">
+      🔗 專案展示網址：
+      <a href="https://yuqunwork-oss.github.io/ntpc-skill-assoc/index.html"
+         target="_blank" rel="noopener">
+        https://yuqunwork-oss.github.io/ntpc-skill-assoc/
+      </a>
+    </p>
 
-  <!-- 使用技術 -->
-  <h3>使用技術</h3>
-  <ul class="tech-list">
-    <li>HTML / CSS / JavaScript</li>
-    <li>Google Forms / Google Sheets</li>
-    <li>Google Apps Script</li>
-    <li>GitHub Pages 部署</li>
-  </ul>
+    <div class="project-media">
+      <h3>🎥 實際操作展示</h3>
+      <video controls muted preload="metadata" class="demo-video">
+        <source src="videos/ntpc_demo09.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放。
+      </video>
+      <p class="media-note">
+        展示內容包含課程瀏覽、線上報名流程，以及後台資料即時彙整示意。
+      </p>
+    </div>
 
-  <!-- 核心功能 -->
-  <h3>核心功能</h3>
-  <ul>
-    <li>課程介紹與招生資訊展示</li>
-    <li>線上報名表單填寫</li>
-    <li>報名資料即時寫入後台表格</li>
-    <li>管理者可即時查看與整理名單</li>
-    <li>支援手機與桌機（RWD）</li>
-  </ul>
+    <h3>我的角色</h3>
+    <ul>
+      <li>需求訪談與系統規劃</li>
+      <li>前端網站設計與製作（HTML / CSS / JavaScript）</li>
+      <li>線上報名表單設計與驗證</li>
+      <li>Google API 串接與資料自動化</li>
+      <li>系統維護與後續功能調整</li>
+    </ul>
 
-  <!-- 專案成果 -->
-  <h3>專案成果</h3>
-  <ul>
-    <li>專案已實際上線並投入使用</li>
-    <li>成功取代人工報名與資料整理流程</li>
-    <li>降低行政作業時間與錯誤率</li>
-    <li>具備後續功能擴充彈性</li>
-  </ul>
+    <h3>使用技術</h3>
+    <ul class="tech-list">
+      <li>HTML / CSS / JavaScript</li>
+      <li>Google Forms / Google Sheets</li>
+      <li>Google Apps Script</li>
+      <li>GitHub Pages 部署</li>
+    </ul>
 
-  
-  <!-- 專案三 --------------------------------------------------------------------------->
-<section class="project-card">
-  <h2>LINE 官方帳號 AI 建置</h2>
-  <ul>
-    <li><strong>功能：</strong>聊天機器人、股票分析、RAG 文件問答</li>
-    <li><strong>展示：</strong>
-      <a href="LINE_Official_Account_AI_Demo.pdf" target="_blank">📄 專案 PDF（含 Demo）</a>
-    </li>
-    <li><strong>技術：</strong>LINE API、AI 模型、RAG、Python</li>
-  </ul>
-</section>
-  <!-- 專案四 --------------------------------------------------------------------------->
+    <h3>核心功能</h3>
+    <ul>
+      <li>課程介紹與招生資訊展示</li>
+      <li>線上報名表單填寫</li>
+      <li>報名資料即時寫入後台表格</li>
+      <li>管理者可即時查看與整理名單</li>
+      <li>支援手機與桌機（RWD）</li>
+    </ul>
 
-    <section class="project-card">
+    <h3>專案成果</h3>
+    <ul>
+      <li>專案已實際上線並投入使用</li>
+      <li>成功取代人工報名與資料整理流程</li>
+      <li>降低行政作業時間與錯誤率</li>
+      <li>具備後續功能擴充彈性</li>
+    </ul>
+  </section>
+
+  <!-- 專案三 -->
+  <section class="project-card">
+    <h2>LINE 官方帳號 AI 建置</h2>
+
+    <ul>
+      <li><strong>功能：</strong>聊天機器人、股票分析、RAG 文件問答</li>
+      <li>
+        <strong>展示：</strong>
+        <a href="LINE_Official_Account_AI_Demo.pdf" target="_blank">
+          📄 專案 PDF（含 Demo）
+        </a>
+      </li>
+    </ul>
+
+    <h3>使用技術</h3>
+    <ul class="tech-list">
+      <li>LINE API / AI 模型 / RAG / Python</li>
+    </ul>
+  </section>
+
+  <!-- 專案四 -->
+  <section class="project-card">
     <h2>AI 影像辨識應用系統</h2>
+
     <ul>
       <li><strong>問題：</strong>將影像辨識模型應用於實務場景，提供即時或離線辨識結果。</li>
       <li><strong>做法：</strong>使用 Python 與影像處理技術，整合深度學習模型進行推論。</li>
       <li><strong>我的角色：</strong>模型整合、影像前處理流程設計、系統實作。</li>
       <li><strong>成果：</strong>完成可實際執行的辨識流程，並產出可視化結果。</li>
-      <li><strong>技術：</strong>Python、OpenCV、YOLO</li>
+    </ul>
+
+    <h3>使用技術</h3>
+    <ul class="tech-list">
+      <li>Python / OpenCV / YOLO</li>
     </ul>
   </section>
-
 
   <!-- 頁尾 -->
   <footer>
