@@ -224,21 +224,35 @@ ul li {
   font-size: 0.9rem;
 }
 /* =========================
-   專案影片優化
+   專案影片展示優化（final）
 ========================= */
+
+/* 外層容器：控制整體最大寬度 */
 .project-media {
-  max-width: 520px;   /* 限制整體展示區寬度 */
-  margin: 30px auto;
+  max-width: 600px;      /* 控制作品版面寬度 */
+  margin: 40px auto;     /* 上下間距統一 */
 }
 
+/* 影片本身：自適應置中 */
 .demo-video {
   width: 100%;
-  max-width: 480px;   /* 控制影片大小 */
-  aspect-ratio: 16 / 9;
+  max-width: 560px;      /* 不會再比這寬 */
+  aspect-ratio: 16 / 9;  /* 穩定 16:9 */
   display: block;
-  margin: 20px auto;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  margin: 16px auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+/* 補充說明文字 */
+.media-note {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  margin-top: 12px;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* =========================
    Footer
