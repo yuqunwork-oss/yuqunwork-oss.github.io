@@ -255,15 +255,18 @@ ul li {
   margin-right: auto;
 }
 /* =========================
-   首頁 Hero 滿版背景
+   Hero 滿版首頁
 ========================= */
 
-.hero {
-  height: 100vh;  /* 滿整個畫面 */
+body {
+  margin: 0;
+}
 
+.hero {
+  height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("images/hero.jpg") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/hero.jpg") center center / cover no-repeat;
 
   display: flex;
   justify-content: center;
@@ -271,14 +274,15 @@ ul li {
   text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 64px;
+.hero-text h1 {
+  font-size: 72px;
   color: white;
+  letter-spacing: 4px;
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 22px;
+.hero-text p {
+  font-size: 20px;
   color: #ddd;
 }
 
