@@ -68,12 +68,13 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
-  margin-bottom: 28px;
+  font-size: 32px;
+  margin: 0 auto 40px;
   color: var(--text-main);
   border-bottom: 3px solid var(--primary);
-  display: inline-block;
   padding-bottom: 8px;
+  text-align: center;
+  width: fit-content;
 }
 
 h3 {
@@ -140,16 +141,16 @@ ul li {
 ========================= */
 .cert-card {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 70px;
-  margin-top: 40px;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 60px;
 }
 
 .cert-item {
-  max-width: 420px;
+  max-width: 500px;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
 .cert-item:hover {
@@ -159,6 +160,18 @@ ul li {
 .cert-item p {
   margin-top: 8px;
   line-height: 1.6;
+}
+.award-photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  margin-bottom: 20px;
+}
+.cert-section {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 /* =========================
