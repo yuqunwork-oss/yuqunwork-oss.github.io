@@ -1,5 +1,5 @@
 /* =========================
-   全站色彩變數
+   全站色彩變數（統一管理）
 ========================= */
 :root {
   --bg-main: #0f172a;
@@ -16,14 +16,6 @@
 ========================= */
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  font-family: 'Segoe UI', Arial, sans-serif;
-  padding-top: 72px; /* 補償固定 nav */
 }
 
 /* =========================
@@ -64,7 +56,6 @@ nav a:hover {
 ========================= */
 section {
   padding: 70px 20px 90px;
-  text-align: center;
 }
 
 /* =========================
@@ -72,12 +63,14 @@ section {
 ========================= */
 h1 {
   font-size: 52px;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 30px;
   margin-bottom: 28px;
+  color: var(--text-main);
   border-bottom: 3px solid var(--primary);
   display: inline-block;
   padding-bottom: 8px;
@@ -114,8 +107,7 @@ ul li {
    卡片樣式
 ========================= */
 .card,
-.cert-section,
-.project-card {
+.cert-section {
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 16px;
@@ -125,8 +117,60 @@ ul li {
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
 }
 
-/* Hover */
+/* =========================
+   證照圖片
+========================= */
+.award-photo {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.award-photo:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   幹部卡片區
+========================= */
+.cert-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 40px;
+}
+
+.cert-item {
+  max-width: 420px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+  transform: translateY(-6px);
+}
+
+.cert-item p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* =========================
+   專案卡片
+========================= */
 .project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 28px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -135,8 +179,43 @@ ul li {
   box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
+.project-desc {
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+.project-link a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
 /* =========================
-   影片展示
+   技術標籤
+========================= */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 24px auto 0;
+}
+
+.tech-list li {
+  background: #1e293b;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   專案影片展示優化（final）
 ========================= */
 .project-media {
   max-width: 600px;
@@ -164,36 +243,17 @@ ul li {
 }
 
 /* =========================
-   技術標籤
+   Hero 滿版首頁
 ========================= */
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  max-width: 800px;
-  margin: 24px auto 0;
+body {
+  margin: 0;
 }
 
-.tech-list li {
-  background: #1e293b;
-  border: 1px solid var(--border-light);
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-}
-
-/* =========================
-   Hero 首頁（只影響有 hero 的頁面）
-========================= */
 .hero {
-  height: calc(100vh - 72px); /* 扣掉 nav */
-  margin-top: -72px;          /* 抵銷 body padding */
-
+  height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url("images/hero.jpg") center center / cover no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,5 +281,4 @@ footer {
   color: var(--text-sub);
   border-top: 1px solid var(--border-light);
   margin-top: 60px;
-  text-align: center;
 }
