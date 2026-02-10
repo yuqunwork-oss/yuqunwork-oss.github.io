@@ -6,20 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <nav>
     <ul>
-      <li><a href="index.html">主頁</a></li>
+      <li><a href="index.html" class="active">主頁</a></li>
       <li><a href="projects.html">作品集</a></li>
       <li><a href="certificates.html">證照與比賽</a></li>
       <li><a href="contact.html">聯絡我</a></li>
     </ul>
   </nav>
 
-  <header class="hero">
-    <!-- 右上角打字機文字 -->
-    <div class="hero-typing">
+  <header class="hero" aria-label="首頁滿版照片背景">
+    <!-- 右上角打字機文字（在照片上，不在導覽列） -->
+    <div class="hero-typing" aria-label="打字機文字">
       <span id="typing"></span>
     </div>
   </header>
@@ -30,8 +31,11 @@
     let i = 0;
 
     function typeWriter() {
+      const el = document.getElementById("typing");
+      if (!el) return;
+
       if (i < text.length) {
-        document.getElementById("typing").textContent += text.charAt(i);
+        el.textContent += text.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
