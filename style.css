@@ -48,11 +48,11 @@ nav ul{
   list-style: none;
   display: flex;
   justify-content: flex-end;     /* 靠右 */
-  align-items: center;
+  align-items:flex-end;
   gap: 18px;
   margin: 0 auto;
-  padding: 0 28px;              /* 右邊留白 */
-  max-width: 1100px;            /* 讓它像你圖那樣集中在右上 */
+  padding: 0 60px 0 0;  /* 右邊留一點空間 */
+  max-width: 1100px;           
 }
 
 nav a{
