@@ -223,7 +223,18 @@ ul li {
   border-radius: 999px;
   font-size: 0.9rem;
 }
-
+/* =========================
+   影片展示優化
+========================= */
+.demo-video {
+  width: 100%;
+  max-width: 480px;      /* 控制影片大小 */
+  aspect-ratio: 16 / 9;  /* 固定比例 */
+  display: block;
+  margin: 30px auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
 /* =========================
    Footer
 ========================= */
