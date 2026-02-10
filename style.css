@@ -211,13 +211,8 @@ a:hover {
 /* =========================
    幹部pdf
 ========================= */
-.award-pdf {
-  width: 100%;
-  height: 70vh;   /* 自動依視窗比例 */
-  border-radius: 12px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
-  margin: 24px auto;
-  display: block;
+.cert-item {
+  max-width: 420px;
 }
 
 .project-card:hover {
