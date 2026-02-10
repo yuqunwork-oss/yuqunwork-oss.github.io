@@ -122,13 +122,13 @@ ul li {
    證照圖片
 ========================= */
 .award-photo {
-  max-width: 460px;
   width: 100%;
+  max-width: 500px;
   height: auto;
   display: block;
   margin: 20px auto;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
   transition: transform 0.3s ease;
 }
 
@@ -161,13 +161,7 @@ ul li {
   margin-top: 8px;
   line-height: 1.6;
 }
-.award-photo {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-  margin-bottom: 20px;
-}
+
 .cert-section {
   background: transparent;
   border: none;
@@ -260,8 +254,11 @@ ul li {
 ========================= */
 body {
   margin: 0;
+  padding-top: 80px;  /* 避開固定導覽列 */
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
-
 .hero {
   height: 100vh;
   background:
