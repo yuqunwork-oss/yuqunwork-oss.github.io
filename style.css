@@ -210,5 +210,13 @@ a:hover {
   border-radius: 999px;
   font-size: 0.9rem;
 }
-
+/* =========================
+   幹部pdf
+========================= */
+.award-pdf {
+  width: 100%;
+  height: 500px;
+  border: none;
+  margin-bottom: 20px;
+}
 
