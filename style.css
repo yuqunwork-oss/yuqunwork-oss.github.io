@@ -224,14 +224,19 @@ ul li {
   font-size: 0.9rem;
 }
 /* =========================
-   影片展示優化
+   專案影片優化
 ========================= */
+.project-media {
+  max-width: 520px;   /* 限制整體展示區寬度 */
+  margin: 30px auto;
+}
+
 .demo-video {
   width: 100%;
-  max-width: 480px;      /* 控制影片大小 */
-  aspect-ratio: 16 / 9;  /* 固定比例 */
+  max-width: 480px;   /* 控制影片大小 */
+  aspect-ratio: 16 / 9;
   display: block;
-  margin: 30px auto;
+  margin: 20px auto;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
