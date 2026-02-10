@@ -158,8 +158,7 @@ a:hover {
 }
 
 .project-desc {
-  color: #555;
-  line-height: 1.7;
+  color: var(--text-sub);
 }
 
 .project-link a {
