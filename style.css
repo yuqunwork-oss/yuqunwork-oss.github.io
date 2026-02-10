@@ -13,10 +13,6 @@
 
   --nav-h: 72px;
   --radius: 16px;
-
-  /* ✅ 補：統一內容寬度，避免每頁看起來不一樣 */
-  --container-w: 1100px;
-  --container-pad: 60px;
 }
 
 /* =========================
@@ -34,9 +30,6 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ✅ 補：讓影像/影片不會超出容器造成跑版 */
-img, video { max-width: 100%; height: auto; display: block; }
-
 /* =========================
    Nav
 ========================= */
@@ -51,16 +44,15 @@ nav{
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-/* ✅ 補：用同一個容器寬度，讓「看起來最右」一致 */
 nav ul{
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;          /* ✅ 修：不要 flex-end，會造成字上下不齊 */
+  justify-content: flex-end;     /* 靠右 */
+  align-items:flex-end;
   gap: 18px;
   margin: 0 auto;
-  padding: 0 var(--container-pad); /* ✅ 改：左右一致的內距 */
-  max-width: var(--container-w);
+  padding: 0 60px 0 0;  /* 右邊留一點空間 */
+  max-width: 1100px;           
 }
 
 nav a{
@@ -68,24 +60,20 @@ nav a{
   color: var(--text-main);
   font-size: 18px;
 
-  padding: 10px 18px;
-  border-radius: 999px;
+  padding: 10px 18px;           /*  形成膠囊 */
+  border-radius: 999px;         /*  圓框 */
   border: 1px solid transparent;
 
   transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 nav a:hover{
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);   /*  圓框底色 */
+  border-color: rgba(255,255,255,0.16); /*  圓框線 */
   transform: translateY(-1px);
 }
 
-/* ✅ 補：目前頁面可手動加 class="active" 讓使用者知道在哪頁（不影響架構） */
-nav a.active{
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.22);
-}
+
 
 /* =========================
    Layout
@@ -138,6 +126,7 @@ h3 {
 
 /* =========================
    Card (通用卡片外框)
+   - 你的 HTML 用到 .cert-section / .project-card / .card
 ========================= */
 .card,
 .cert-section,
@@ -150,11 +139,6 @@ h3 {
   padding: 36px 28px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
-/* ✅ 補：避免內容溢出導致陰影/圓角看起來怪 */
-.card,
-.cert-section,
-.project-card { overflow: hidden; }
 
 /* =========================
    Project Card hover
@@ -231,6 +215,7 @@ h3 {
 
 /* =========================
    幹部證明：左右排版
+   - 你的 HTML 用到 .cert-card / .cert-item
 ========================= */
 .cert-card {
   display: flex;
@@ -245,7 +230,6 @@ h3 {
   width: min(520px, 100%);
   text-align: center;
   transition: transform 0.25s ease;
-  will-change: transform; /* ✅ 補：hover 更穩 */
 }
 
 .cert-item:hover { transform: translateY(-6px); }
@@ -279,10 +263,11 @@ h3 {
 
 /* =========================
    Hero (首頁滿版)
+   - 你的 HTML 用到 .hero / .hero-text
 ========================= */
 .hero {
   height: calc(100vh - var(--nav-h));
-  margin-top: calc(-1 * var(--nav-h));
+  margin-top: calc(-1 * var(--nav-h)); /* 抵銷 body padding-top */
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url("images/hero.jpg") center center / cover no-repeat;
@@ -290,34 +275,6 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  /* ✅ 補：讓右上角文字可以定位 */
-  position: relative;
-}
-
-/* ✅ 補：你要的「照片右上角」打字機文字（不影響原本 .hero-text 架構） */
-.hero-typing{
-  position: absolute;
-  top: 22px;
-  right: 28px;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 20px;
-  text-shadow: 0 10px 24px rgba(0,0,0,0.55);
-  user-select: none;
-}
-
-.hero-typing #typing::after{
-  content: "|";
-  margin-left: 6px;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink{
-  0%{opacity:1;}
-  50%{opacity:0;}
-  100%{opacity:1;}
 }
 
 .hero-text h1 {
@@ -333,14 +290,14 @@ h3 {
   margin: 0;
   max-width: 900px;
 }
-
 /* =========================
   頁首標題區：作品集/證照等頁面
 ========================= */
+
 .page-header{
   max-width: 1000px;
   margin: 0 auto;
-  padding: 90px 20px 40px;
+  padding: 90px 20px 40px;   /* 上方避開 nav，下面留空間 */
   text-align: center;
 }
 
@@ -352,7 +309,6 @@ h3 {
 .page-header p{
   margin: 0 auto;
 }
-
 /* =========================
    Footer
 ========================= */
@@ -369,24 +325,10 @@ footer {
    Responsive
 ========================= */
 @media (max-width: 768px) {
-  nav ul {
-    gap: 12px;
-    padding: 0 16px; /* ✅ 手機左右不要太擠 */
-  }
-
-  nav a {
-    font-size: 15px;
-    padding: 8px 12px;
-  }
-
+  nav ul { gap: 20px; }
   h1 { font-size: 40px; }
   h2 { font-size: 26px; }
-
   section { padding: 70px 16px 80px; }
-
   .card, .cert-section, .project-card { padding: 28px 18px; }
   .cert-card { gap: 36px; }
-
-  .hero-text h1 { font-size: 44px; }
-  .hero-typing { top: 16px; right: 16px; font-size: 14px; }
 }
