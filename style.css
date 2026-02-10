@@ -278,7 +278,25 @@ h3 {
   margin: 0;
   max-width: 900px;
 }
+/* =========================
+  頁首標題區：作品集/證照等頁面
+========================= */
 
+.page-header{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 20px 40px;   /* 上方避開 nav，下面留空間 */
+  text-align: center;
+}
+
+.page-header h1{
+  margin: 0 auto 16px;
+  width: fit-content;
+}
+
+.page-header p{
+  margin: 0 auto;
+}
 /* =========================
    Footer
 ========================= */
