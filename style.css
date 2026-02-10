@@ -255,6 +255,34 @@ ul li {
   margin-right: auto;
 }
 /* =========================
+   首頁 Hero 滿版背景
+========================= */
+
+.hero {
+  height: 100vh;  /* 滿整個畫面 */
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/hero.jpg") center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  color: #ddd;
+}
+
+/* =========================
    Footer
 ========================= */
 footer {
