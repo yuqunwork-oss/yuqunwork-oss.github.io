@@ -6,7 +6,6 @@
   --bg-nav: #1e293b;
   --bg-card: #111827;
   --primary: #38bdf8;
-
   --text-main: #f8fafc;
   --text-sub: #cbd5e1;
   --border-light: #334155;
@@ -24,7 +23,7 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: 'Segoe UI', Arial, sans-serif;
-  padding-top: 72px; /* 導覽列高度 */
+  padding-top: 72px; /* 補償固定 nav */
 }
 
 /* =========================
@@ -126,9 +125,7 @@ ul li {
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   Project Hover
-========================= */
+/* Hover */
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -187,12 +184,11 @@ ul li {
 }
 
 /* =========================
-   首頁 Hero（只影響 index.html）
+   Hero 首頁（只影響有 hero 的頁面）
 ========================= */
 .hero {
-  height: 100vh;
-  padding-top: 0; /* 抵銷 body padding */
-  margin-top: -72px; /* 抵銷 nav 高度 */
+  height: calc(100vh - 72px); /* 扣掉 nav */
+  margin-top: -72px;          /* 抵銷 body padding */
 
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
