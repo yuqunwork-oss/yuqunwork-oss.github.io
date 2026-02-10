@@ -8,8 +8,7 @@
 </head>
 <body>
 
-    <nav>
-      <div class="logo">YU-QUN WU</div>
+  <nav>
     <ul>
       <li><a href="index.html">主頁</a></li>
       <li><a href="projects.html">作品集</a></li>
@@ -17,11 +16,29 @@
       <li><a href="contact.html">聯絡我</a></li>
     </ul>
   </nav>
-<header class="hero">
-  <div class="hero-text">
-    <h1>YU-QUN,WU</h1>
-  </div>
-</header>
+
+  <header class="hero">
+    <!-- 右上角打字機文字 -->
+    <div class="hero-typing">
+      <span id="typing"></span>
+    </div>
+  </header>
+
+  <script>
+    const text = "YU-QUN, WU";
+    const speed = 120; // 打字速度 (越小越快)
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter();
+  </script>
 
 </body>
 </html>
