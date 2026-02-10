@@ -1,5 +1,5 @@
 /* =========================
-   全站色彩變數（統一管理）
+   全站色彩變數
 ========================= */
 :root {
   --bg-main: #0f172a;
@@ -19,6 +19,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-top: 72px; /* 導覽列高度 */
+}
 
 /* =========================
    導覽列
@@ -58,6 +65,7 @@ nav a:hover {
 ========================= */
 section {
   padding: 70px 20px 90px;
+  text-align: center;
 }
 
 /* =========================
@@ -65,14 +73,12 @@ section {
 ========================= */
 h1 {
   font-size: 52px;
-  color: var(--primary);
   margin-bottom: 20px;
 }
 
 h2 {
   font-size: 30px;
   margin-bottom: 28px;
-  color: var(--text-main);
   border-bottom: 3px solid var(--primary);
   display: inline-block;
   padding-bottom: 8px;
@@ -109,7 +115,8 @@ ul li {
    卡片樣式
 ========================= */
 .card,
-.cert-section {
+.cert-section,
+.project-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 16px;
@@ -120,59 +127,9 @@ ul li {
 }
 
 /* =========================
-   證照圖片
-========================= */
-.award-photo {
-  max-width: 460px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-
-.award-photo:hover {
-  transform: scale(1.03);
-}
-
-/* =========================
-   幹部卡片區
-========================= */
-.cert-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 70px;
-  margin-top: 40px;
-}
-
-.cert-item {
-  max-width: 420px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.cert-item:hover {
-  transform: translateY(-6px);
-}
-
-.cert-item p {
-  margin-top: 8px;
-  line-height: 1.6;
-}
-
-/* =========================
-   專案卡片
+   Project Hover
 ========================= */
 .project-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-light);
-  padding: 28px;
-  margin-bottom: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -181,18 +138,32 @@ ul li {
   box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
-.project-desc {
+/* =========================
+   影片展示
+========================= */
+.project-media {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.demo-video {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 16px auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.media-note {
+  font-size: 0.95rem;
   color: var(--text-sub);
-  line-height: 1.7;
-}
-
-.project-link a {
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.project-link a:hover {
-  text-decoration: underline;
+  margin-top: 12px;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -209,61 +180,23 @@ ul li {
 
 .tech-list li {
   background: #1e293b;
-  color: var(--text-main);
   border: 1px solid var(--border-light);
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 0.9rem;
 }
+
 /* =========================
-   專案影片展示優化（final）
+   首頁 Hero（只影響 index.html）
 ========================= */
-
-/* 外層容器：控制整體最大寬度 */
-.project-media {
-  max-width: 600px;      /* 控制作品版面寬度 */
-  margin: 40px auto;     /* 上下間距統一 */
-}
-
-/* 影片本身：自適應置中 */
-.demo-video {
-  width: 100%;
-  max-width: 560px;      /* 不會再比這寬 */
-  aspect-ratio: 16 / 9;  /* 穩定 16:9 */
-  display: block;
-  margin: 16px auto;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
-}
-
-/* 補充說明文字 */
-.media-note {
-  font-size: 0.95rem;
-  color: var(--text-sub);
-  margin-top: 12px;
-  line-height: 1.6;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* =========================
-   Hero 滿版首頁
-========================= */
-
-body {
-  margin: 0;
-}
-
 .hero {
   height: 100vh;
+  padding-top: 0; /* 抵銷 body padding */
+  margin-top: -72px; /* 抵銷 nav 高度 */
 
   background:
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("images/hero.jpg");
-
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/hero.jpg") center center / cover no-repeat;
 
   display: flex;
   justify-content: center;
@@ -292,4 +225,5 @@ footer {
   color: var(--text-sub);
   border-top: 1px solid var(--border-light);
   margin-top: 60px;
+  text-align: center;
 }
