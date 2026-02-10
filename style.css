@@ -162,8 +162,7 @@ a:hover {
 }
 
 .project-link a {
-  color: #2563eb;
-  text-decoration: none;
+ color: var(--primary);
 }
 
 .project-link a:hover {
