@@ -278,7 +278,7 @@ h3 {
   justify-content: flex-start; /* ✅ 靠左 */
   text-align: left;
 
-  padding: 0 60px 72px;        /* ✅ 左下留白 */
+  padding: 0 72px 86px;        /* ✅ 左下留白 */
   overflow: hidden;
 }
 
@@ -322,6 +322,7 @@ h3 {
   font-size: clamp(14px, 2vw, 18px);
   color: rgba(255,255,255,0.82);
   margin: 0;
+  max-width: 760px; 
   line-height: 1.7;
   text-shadow: 0 8px 22px rgba(0,0,0,0.45);
 }
