@@ -402,8 +402,7 @@ footer {
 /* =========================
    Responsive
 ========================= */
-@media (max-width: 768px) {
-  nav ul { gap: 20px; }
+@media (max-width: 1024px) {
   h1 { font-size: 40px; }
   h2 { font-size: 26px; }
   section { padding: 70px 16px 80px; }
