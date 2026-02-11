@@ -266,29 +266,28 @@ h3 {
    - 你的 HTML 用到 .hero / .hero-text
 ========================= */
 .hero {
+  position: relative;
   height: calc(100vh - var(--nav-h));
-  margin-top: calc(-1 * var(--nav-h)); /* 抵銷 body padding-top */
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/hero.jpg") center center / cover no-repeat;
+  margin-top: calc(-1 * var(--nav-h));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
-.hero-text h1 {
-  font-size: clamp(32px, 6vw, 72px);
-  color: #fff;
-  letter-spacing: 4px;
-  margin: 0 0 18px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("image.jpg") center/cover no-repeat;
+  filter: grayscale(100%);
+  transition: filter 0.8s ease-in-out;
+  z-index: -1;
 }
 
-.hero-text p {
-  font-size: clamp(14px, 2vw, 20px);
-  color: #ddd;
-  margin: 0;
-  max-width: 900px;
+.hero:hover::before {
+  filter: grayscale(0%);
 }
 /* =========================
   頁首標題區：作品集/證照等頁面
@@ -331,4 +330,13 @@ footer {
   section { padding: 70px 16px 80px; }
   .card, .cert-section, .project-card { padding: 28px 18px; }
   .cert-card { gap: 36px; }
+}
+@media (hover: hover) {
+  .hero::before {
+    filter: grayscale(100%);
+  }
+
+  .hero:hover::before {
+    filter: grayscale(0%);
+  }
 }
