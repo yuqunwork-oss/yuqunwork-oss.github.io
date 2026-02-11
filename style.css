@@ -291,11 +291,11 @@ h3 {
   background:
     /*  左側更深、右側更淡（範例感的靈魂） */
     linear-gradient(
-      90deg,
-      rgba(6, 24, 28, 0.70) 0%,
-      rgba(10, 40, 44, 0.45) 45%,
-      rgba(0, 0, 0, 0.18) 100%
-    ),
+     90deg,
+     rgba(8, 16, 28, 0.72) 0%,
+     rgba(10, 24, 40, 0.46) 45%,
+     rgba(0, 0, 0, 0.18) 100%
+   )
     url("./images/hero.jpg") center/cover no-repeat;
 
   /*  不黑白：保留色調 + 霧感 */
