@@ -281,7 +281,7 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("image.jpg") center/cover no-repeat; /* ⚠️ 路徑要對 */
+  background: url("./images/hero.jpg") center/cover no-repeat; /* ⚠️ 路徑要對 */
   filter: grayscale(100%);
   transition: filter 0.8s ease-in-out;
   z-index: -1;
@@ -352,12 +352,4 @@ footer {
   .card, .cert-section, .project-card { padding: 28px 18px; }
   .cert-card { gap: 36px; }
 }
-@media (hover: hover) {
-  .hero::before {
-    filter: grayscale(100%);
-  }
 
-  .hero:hover::before {
-    filter: grayscale(0%);
-  }
-}
