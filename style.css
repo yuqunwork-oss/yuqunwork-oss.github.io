@@ -267,6 +267,7 @@ h3 {
 ========================= */
 .hero {
   position: relative;
+  z-index: 0;   /* 🔥 加這行 */
   height: calc(100vh - var(--nav-h));
   margin-top: calc(-1 * var(--nav-h));
   display: flex;
