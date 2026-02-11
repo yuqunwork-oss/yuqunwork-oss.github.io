@@ -5,6 +5,16 @@
   <title>作品網站｜吳育群</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Google 色彩（也可以搬到 style.css） -->
+  <style>
+    .g-name { font-weight: 800; }
+    .g1 { color: #4285F4; } /* Blue */
+    .g2 { color: #EA4335; } /* Red */
+    .g3 { color: #FBBC05; } /* Yellow */
+    .g4 { color: #34A853; } /* Green */
+    .g-name span { text-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+  </style>
 </head>
 <body>
 
@@ -18,20 +28,52 @@
   </nav>
 
   <header class="hero">
-    <!-- 右上角打字機文字 -->
-    <div class="hero-typing">
-      <span id="typing"></span>
+    <!-- ✅ 左下角文字區（像範例那種感覺） -->
+    <div class="hero-text">
+      <p class="hero-typing">
+        <span id="typing"></span>
+      </p>
     </div>
   </header>
 
   <script>
-    const text = "Hello, welcome to my portfolio. I’m YU-QUN WU, a graduate of NTUB (Information Management). I focus on AI applications and software development, with hands-on experience in JavaScript and Python to build practical, real-world solutions.";
+    const fullText =
+      "Hello, welcome to my portfolio. I’m YU-QUN WU, a graduate of NTUB (Information Management). " +
+      "I focus on AI applications and software development, with hands-on experience in JavaScript and Python " +
+      "to build practical, real-world solutions.";
+
+    const targetName = "YU-QUN WU";
+
+    // ✅ 你要的 Google 顏色名字（HTML）
+    const coloredName =
+      '<span class="g-name" aria-label="YU-QUN WU">' +
+        '<span class="g1">Y</span>' +
+        '<span class="g2">U</span>' +
+        '<span class="g3">-</span>' +
+        '<span class="g1">Q</span>' +
+        '<span class="g4">U</span>' +
+        '<span class="g2">N</span>' +
+        '<span> </span>' +
+        '<span class="g1">W</span>' +
+        '<span class="g2">U</span>' +
+      '</span>';
+
     const speed = 30; // 打字速度 (越小越快)
+    const typingEl = document.getElementById("typing");
+
     let i = 0;
+    let buffer = "";
+
+    function renderWithColoredName(textSoFar) {
+      // 把已打出的文字中出現的 YU-QUN WU 替換成彩色 HTML
+      // 用 innerHTML 才能顯示顏色
+      typingEl.innerHTML = textSoFar.replaceAll(targetName, coloredName);
+    }
 
     function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typing").textContent += text.charAt(i);
+      if (i < fullText.length) {
+        buffer += fullText.charAt(i);
+        renderWithColoredName(buffer);
         i++;
         setTimeout(typeWriter, speed);
       }
