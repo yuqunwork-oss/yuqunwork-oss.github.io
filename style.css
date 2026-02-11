@@ -368,6 +368,23 @@ h3 {
 
   .pill-wide{ min-width: 220px; }
 }
+.g-name-link{
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.g-name-link:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.g1 { color: #4285F4; } /* Blue */
+.g2 { color: #EA4335; } /* Red */
+.g3 { color: #FBBC05; } /* Yellow */
+.g4 { color: #34A853; } /* Green */
+.space { display: inline-block; width: 0.35em; }
+
+
 /* =========================
   頁首標題區：作品集/證照等頁面
 ========================= */
