@@ -39,7 +39,7 @@ nav{
   width: 100%;
   z-index: 100;
 
-  /* ✅ 半透明 + 模糊（像範例那種浮在圖上） */
+  /* 半透明 + 模糊（像範例那種浮在圖上） */
   background: rgba(15, 23, 42, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -274,11 +274,11 @@ h3 {
   margin-top: calc(-1 * var(--nav-h)); /* 抵銷 body padding-top */
 
   display: flex;
-  align-items: flex-end;       /* ✅ 靠下 */
-  justify-content: flex-start; /* ✅ 靠左 */
+  align-items: flex-end;       /*  靠下 */
+  justify-content: flex-start; /*  靠左 */
   text-align: left;
 
-  padding: 0 72px 86px;        /* ✅ 左下留白 */
+  padding: 0 72px 86px;        /*  左下留白 */
   overflow: hidden;
 }
 
@@ -289,7 +289,7 @@ h3 {
   inset:0;
 
   background:
-    /* ✅ 左側更深、右側更淡（範例感的靈魂） */
+    /*  左側更深、右側更淡（範例感的靈魂） */
     linear-gradient(
       90deg,
       rgba(6, 24, 28, 0.70) 0%,
@@ -298,7 +298,7 @@ h3 {
     ),
     url("./images/hero.jpg") center/cover no-repeat;
 
-  /* ✅ 不黑白：保留色調 + 霧感 */
+  /*  不黑白：保留色調 + 霧感 */
   filter: saturate(120%) contrast(108%) brightness(88%);
   transform: scale(1.02); /* 避免邊緣白邊 */
   z-index:-1;
