@@ -13,7 +13,6 @@
       line-height: 1.1;
     }
 
-    /* 讓連結看起來不像預設超連結（不底線、不變色） */
     .g-name-link {
       text-decoration: none;
       color: inherit;
@@ -50,8 +49,6 @@
   <script>
     const fullText = "Hello,  I’m YU-QUN WU, Welcome to my portfolio. ";
     const targetName = "YU-QUN WU";
-
-    // ✅ 注意：這裡一定要同時套上 g-name + g-name-link
     const coloredName =
       '<a href="contact.html" class="g-name g-name-link" aria-label="Contact me">' +
         '<span class="g1">Y</span>' +
@@ -65,7 +62,7 @@
         '<span class="g2">U</span>' +
       '</a>';
 
-    const speed = 30; // 打字速度 (越小越快)
+    const speed = 50; // 打字速度 (越小越快)
     const typingEl = document.getElementById("typing");
 
     let i = 0;
